@@ -5,9 +5,7 @@ import net.minecraft.core.BlockPos;
 
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Tiers;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.TierSortingRegistry;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -21,10 +19,10 @@ public abstract class PlayerHooksMixin {
 
     @Inject(method = "isBreakingNerfed", at = @At(value = "RETURN", ordinal = 0), cancellable = true)
     private static void noNerfBreaking(Item item, Player player, BlockState state, CallbackInfoReturnable<Boolean> cir) {
-        cir.setReturnValue(item != null && !TierSortingRegistry.isCorrectTierForDrops(Tiers.WOOD, state));
+        cir.setReturnValue(false);
     }
 
-    @Inject(method = "modifyBreakSpeed", at = @At(value = "RETURN", ordinal = 0), cancellable = true)
+    @Inject(method = "modifyBreakSpeed", at = @At(value = "HEAD"), cancellable = true)
     private static void noModifyBreakSpeed(float speed, BlockState state, @Nullable BlockPos pos, Player player, CallbackInfoReturnable<Float> cir) {
         cir.setReturnValue(speed);
     }
