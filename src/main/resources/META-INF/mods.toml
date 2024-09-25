@@ -1,0 +1,29 @@
+modLoader="javafml" #mandatory
+loaderVersion="[43,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+license="MIT License"
+[[mods]] #mandatory
+modId="skybreaker" #mandatory
+version="1.20.1-1.0.0" #mandatory
+displayName="Sky Breaker" #mandatory
+authors="Rinko1231" #optional
+description="Let Blue Sky Nerfs go away!"
+configBackground="minecraft:textures/block/bricks.png"
+
+[[dependencies.skybreaker]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[43,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.skybreaker]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.skybreaker]]
+    modId="blue_skies"
+    versionRange="[1.3.31,)"
+    mandatory=true
+    ordering="NONE"
+    side="BOTH"
