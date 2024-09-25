@@ -13,6 +13,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+//Potato boy the Great!
+//护甲还原
 @Mixin(LivingEntity.class)
 public abstract class MCLivingEntityMixin extends Entity {
     public MCLivingEntityMixin(EntityType<?> type, Level level) {

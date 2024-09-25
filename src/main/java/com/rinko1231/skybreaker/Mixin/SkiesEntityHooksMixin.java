@@ -7,6 +7,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+//伤害还原
 @Mixin(value = SkiesEntityHooks.class, remap = false)
 public class SkiesEntityHooksMixin {
     @Inject(method = "nerfDamage", at = @At(value = "RETURN", ordinal = 0), cancellable = true)
@@ -14,9 +15,4 @@ public class SkiesEntityHooksMixin {
          cir.setReturnValue(amount);
     }
 
-
-    @Inject(method = "nerfIndirectDamage", at = @At(value = "RETURN", ordinal = 0), cancellable = true)
-    private static void noNerfIndirectDamage(DamageSource source, float amount, CallbackInfoReturnable<Float> cir) {
-        cir.setReturnValue(amount);
-    }
 }

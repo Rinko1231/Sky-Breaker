@@ -6,7 +6,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-
+//取消伤害削弱
 @Mixin(value = SkiesEvents.class, remap = false)
 public abstract class SkiesEventsMixin {
     @Inject(method = "onLivingHurt", at = @At("HEAD"), cancellable = true)

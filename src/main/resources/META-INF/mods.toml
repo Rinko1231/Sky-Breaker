@@ -6,7 +6,7 @@ modId="skybreaker" #mandatory
 version="1.20.1-1.0.0" #mandatory
 displayName="Sky Breaker" #mandatory
 authors="Rinko1231" #optional
-description="Let Blue Sky Nerfs go away!"
+description="Let Blue Skies Nerfs go away!"
 configBackground="minecraft:textures/block/bricks.png"
 
 [[dependencies.skybreaker]] #optional
