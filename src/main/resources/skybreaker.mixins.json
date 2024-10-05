@@ -5,6 +5,8 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "skybreaker.refmap.json",
   "mixins": [
+    "ArachnarchEntityMixin",
+    "EntWallEntityMixin",
     "MCLivingEntityMixin",
     "PlayerHooksMixin",
     "SkiesEntityHooksMixin",
