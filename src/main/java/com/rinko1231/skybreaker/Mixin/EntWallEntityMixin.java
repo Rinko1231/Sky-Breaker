@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@Mixin(value = EntWallEntity.class, remap = false)
+@Mixin(value = EntWallEntity.class)
 public abstract class EntWallEntityMixin extends LivingEntity {
 
     protected EntWallEntityMixin(EntityType<? extends LivingEntity> p_20966_, Level p_20967_) {

@@ -21,7 +21,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.Set;
 
-@Mixin(value = ArachnarchEntity.class, remap = false)
+@Mixin(value = ArachnarchEntity.class)
 public abstract class ArachnarchEntityMixin extends SkiesBossEntity implements RangedAttackMob, IStunnableMob {
 
     public ArachnarchEntityMixin(EntityType<? extends SkiesBossEntity> type, Level worldIn) {
