@@ -45,12 +45,12 @@ public abstract class ArachnarchEntityMixin extends SkiesBossEntity implements R
         } else {
             if (entityIn instanceof Player player) {
                 ItemStack playerItem = player.isUsingItem() ? player.getUseItem() : ItemStack.EMPTY;
-                if (!playerItem.isEmpty() && !this.level().isClientSide) {
+                if (!playerItem.isEmpty() && !this.getLevel().isClientSide) {
                     if (SHIELDS.contains(playerItem.getItem()) || playerItem.canPerformAction(ToolActions.SHIELD_BLOCK)) {
-                        this.level().broadcastEntityEvent(this, (byte) 4);
+                        this.getLevel().broadcastEntityEvent(this, (byte) 4);
                         this.setStunned(true);
-                        this.level().broadcastEntityEvent(player, (byte) 29);
-                        this.level().broadcastEntityEvent(player, (byte) 30);
+                        this.getLevel().broadcastEntityEvent(player, (byte) 29);
+                        this.getLevel().broadcastEntityEvent(player, (byte) 30);
                         player.disableShield(true);
                         player.getCooldowns().addCooldown(playerItem.getItem(), 300);
                         player.getUsedItemHand();

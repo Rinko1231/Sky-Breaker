@@ -27,7 +27,7 @@ public abstract class EntWallEntityMixin extends LivingEntity {
 
     @Inject(method = "hurt", at = @At("HEAD"), cancellable = true)
     private void wallBreaker(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
-        if (source == this.damageSources().fellOutOfWorld()) {
+        if (source == DamageSource.OUT_OF_WORLD) {
             cir.setReturnValue(super.hurt(source, amount));
 
         } else {
