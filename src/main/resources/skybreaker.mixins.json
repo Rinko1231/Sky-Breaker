@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.rinko1231.skybreaker.Mixin",
+  "package": "com.rinko1231.skybreaker.mixin",
   "compatibilityLevel": "JAVA_17",
   "refmap": "skybreaker.refmap.json",
   "mixins": [
