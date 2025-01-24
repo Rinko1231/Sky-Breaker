@@ -62,7 +62,7 @@ public abstract class ArachnarchEntityMixin extends SkiesBossEntity implements R
                 }
             }
 
-            cir.setReturnValue(super.doHurtTarget(entityIn));
+            //cir.setReturnValue(super.doHurtTarget(entityIn));
         }
     }
 
