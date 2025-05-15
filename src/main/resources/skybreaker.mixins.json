@@ -10,7 +10,8 @@
     "MCLivingEntityMixin",
     "PlayerHooksMixin",
     "SkiesEntityHooksMixin",
-    "SkiesEventsMixin"
+    "SkiesEventsMixin",
+    "TreeBossMixin"
   ],
   "injectors": {
     "defaultRequire": 1

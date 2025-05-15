@@ -39,7 +39,7 @@ public abstract class ArachnarchEntityMixin extends SkiesBossEntity implements R
 
 
     @Inject(method = "doHurtTarget", at = @At("HEAD"), cancellable = true)
-    private void anyShieldBlock(Entity entityIn, CallbackInfoReturnable<Boolean> cir) {
+    public void anyShieldBlock(Entity entityIn, CallbackInfoReturnable<Boolean> cir) {
         if (this.isAlliedTo(entityIn)) {
             cir.setReturnValue(false);
         } else {
@@ -61,8 +61,7 @@ public abstract class ArachnarchEntityMixin extends SkiesBossEntity implements R
 
                 }
             }
-
-            //cir.setReturnValue(super.doHurtTarget(entityIn));
+             //else cir.setReturnValue(super.doHurtTarget(entityIn));
         }
     }
 
