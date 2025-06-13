@@ -13,6 +13,6 @@ public interface ISkyBossMixin {
      */
     @Overwrite
     default int getDamageCap() {
-        return 114514;
+        return SkyBreakerConfig.bossDamageCap.get();
     }
 }
