@@ -2,6 +2,7 @@ package com.rinko1231.skybreaker.mixin;
 
 
 import com.legacy.blue_skies.entities.util.interfaces.ISkyBoss;
+import com.rinko1231.skybreaker.config.SkyBreakerConfig;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 

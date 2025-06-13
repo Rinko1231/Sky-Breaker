@@ -88,7 +88,7 @@ public abstract class TreeBossMixin extends SkiesBossEntity implements IStunnabl
                     ((Player) source.getDirectEntity()).displayClientMessage(Component.translatable("gui.blue_skies.tooltip.invalid_ent_weapon"), true);
                 }
 
-                return super.hurt(source, Math.min(5.0F, amount * SkyBreakerConfig.treeProtection2.get().floatValue()));
+                return super.hurt(source, Math.min(SkyBreakerConfig.treeUnwhitelistedProjectileDamageCap.get().floatValue(), amount * SkyBreakerConfig.treeProtection2.get().floatValue()));
             }
         } else {
             return false;

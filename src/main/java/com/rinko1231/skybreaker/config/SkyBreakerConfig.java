@@ -18,6 +18,7 @@ public class SkyBreakerConfig
     public static ForgeConfigSpec.DoubleValue treeProtection2;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> projectileWhitelist;
     public static ForgeConfigSpec.IntValue bossDamageCap;
+    public static ForgeConfigSpec.DoubleValue treeUnwhitelistedProjectileDamageCap;
 
     static
     {
@@ -44,6 +45,9 @@ public class SkyBreakerConfig
                         element -> element instanceof String);
         bossDamageCap = BUILDER
                 .defineInRange("The Max Damage A Boss Can Take",500,1,Integer.MAX_VALUE);
+        treeUnwhitelistedProjectileDamageCap = BUILDER
+                .defineInRange("Max damage The Tree Takes from Non-Projectile-Whitelisted projectiles",500,1,Double.MAX_VALUE);
+
 
         SPEC = BUILDER.build();
     }
