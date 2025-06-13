@@ -17,6 +17,7 @@ public class SkyBreakerConfig
     public static ForgeConfigSpec.DoubleValue treeProtection;
     public static ForgeConfigSpec.DoubleValue treeProtection2;
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> projectileWhitelist;
+    public static ForgeConfigSpec.IntValue bossDamageCap;
 
     static
     {
@@ -41,6 +42,8 @@ public class SkyBreakerConfig
                 .comment("Besides SpearEntity, the additional Projectiles that can be used to stun the Starlit Crusher")
                 .defineList("Projectile Whitelist", List.of("minecraft:trident"),
                         element -> element instanceof String);
+        bossDamageCap = BUILDER
+                .defineInRange("The Max Damage A Boss Can Take",500,1,Integer.MAX_VALUE);
 
         SPEC = BUILDER.build();
     }

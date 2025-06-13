@@ -5,12 +5,15 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "skybreaker.refmap.json",
   "mixins": [
-    "ArachnarchEntityMixin",
     "EntWallEntityMixin",
+    "ISkyBossMixin",
     "MCLivingEntityMixin",
     "PlayerHooksMixin",
     "SkiesEntityHooksMixin",
     "SkiesEventsMixin",
+    "SpiderDamageCapMixin",
+    "SpiderMixin",
+    "SummonerDamageCapMixin",
     "TreeBossMixin"
   ],
   "injectors": {
